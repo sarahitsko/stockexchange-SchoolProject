@@ -1,0 +1,26 @@
+#marquee {
+  margin: 0;
+  width: max-content;
+}
+#marquee.category {
+  display: flex;
+}
+
+.category {
+  font-size: 1rem;
+  margin-left: 20px;
+}
+@keyframes marquee-right-to-left {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #marquee {
+    animation: marquee-right-to-left 500s linear infinite;
+  }
+}
